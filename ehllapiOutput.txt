@@ -1,0 +1,37 @@
+Declare PtrSafe Function PCOMM_DisconnectPS& Lib "PCSHLL32.DLL" Alias "hllapi" (HllFunctionNo&, ByVal HllData$, HllLength&, HllReturnCode&)
+Declare PtrSafe Function PCOMM_SendKey& Lib "PCSHLL32.DLL" Alias "hllapi" (HllFunctionNo&, ByVal HllData$, HllLength&, HllReturnCode&)
+Declare PtrSafe Function PCOMM_ConnectPS& Lib "PCSHLL32.DLL" Alias "hllapi" (HllFunctionNo&, ByVal HllData$, HllLength&, HllReturnCode&)
+Dim SessionID As Integer
+Dim ProfileName As String
+Dim HllFunctionNo As Integer
+Dim HllData As String
+Dim HllLength As Integer
+Dim HllReturnCode As Integer
+Dim breakFlag as Boolean
+Dim waitValueMinutes as Integer
+Dim count as Integer
+
+Sub subSub1_()
+	'The ConnectPS function connects to the presentation space
+	sessionName = InputBox("Enter session name")
+	HllFunctionNumber = 1
+	HllData = sessionName
+	HllLength = 1
+	HllReturnCode = 0
+	retVal = PCOMM_ConnectPS(1, sessionName, 1, 0)
+	
+	'The SendKey function outputs its parameter to the screen
+	HllFunctionNumber = 3
+	HllData = "wuser"
+	HllLength = 5
+	HllReturnCode = 0
+	retVal = PCOMM_SendKey(3, "wuser", 5, 0)
+	
+	'The DisconnectPS function disconnects from the presentation space
+	HllFunctionNumber = 2
+	HllData = 0
+	HllLength = 0
+	HllReturnCode = 0
+	retVal = PCOMM_DisconnectPS(2, 0, 0, 0)
+	
+End Sub 

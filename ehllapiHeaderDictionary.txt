@@ -1,0 +1,6 @@
+{
+1: 'Declare PtrSafe Function PCOMM_ConnectPS& Lib "PCSHLL32.DLL" Alias "hllapi" (HllFunctionNo&, ByVal HllData$, HllLength&, HllReturnCode&)',
+2: 'Declare PtrSafe Function PCOMM_DisconnectPS& Lib "PCSHLL32.DLL" Alias "hllapi" (HllFunctionNo&, ByVal HllData$, HllLength&, HllReturnCode&)',
+3: 'Declare PtrSafe Function PCOMM_SendKey& Lib "PCSHLL32.DLL" Alias "hllapi" (HllFunctionNo&, ByVal HllData$, HllLength&, HllReturnCode&)',
+4: 'Declare PtrSafe Function PCOMM_Wait& Lib "PCSHLL32.DLL" Alias "hllapi" (HllFunctionNo&, ByVal HllData$, HllLength&, HllReturnCode&)'
+}

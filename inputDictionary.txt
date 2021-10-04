@@ -1,0 +1,8 @@
+{
+"SetConnectionByName": 1,
+"DisconnectPS": 2,
+"SendKeys": 3,
+"WaitForAppAvailable": 4,
+"WaitForInputReady": 4,
+"Wait": 4
+}

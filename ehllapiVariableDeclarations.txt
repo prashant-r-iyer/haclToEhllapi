@@ -1,0 +1,10 @@
+Dim SessionID As Integer
+Dim ProfileName As String
+Dim HllFunctionNo As Integer
+Dim HllData As String
+Dim HllLength As Integer
+Dim HllReturnCode As Integer
+Dim breakFlag as Boolean
+Dim waitValueMinutes as Integer
+Dim count as Integer
+
